@@ -55,4 +55,22 @@ public class BinarySearch {
     	
     	
     }
+private static boolean binarySearchnew(List<Integer> lst, int key, int high, int low) {
+		
+		int mid;
+		while(low <= high) {
+		  mid = (low+high)/2;	 
+		  if(lst.get(mid)==key) {
+			  System.out.println("Found at index "+mid);
+			  return true;
+		  }
+		  else if(lst.get(mid)<key) {
+			  low = mid+1;
+		  }
+		  else
+			  high = mid-1;
+		}
+		
+		return false;
+	}
 }
